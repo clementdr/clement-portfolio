@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        custom: ['"Unno"', "sans-serif"], // Ta police personnalisée ici
+      },
     },
   },
   plugins: [],
