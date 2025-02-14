@@ -1,11 +1,31 @@
+"use client";
 export default function Home() {
   return (
     <>
       {/* Hero */}
       <main className="font-custom bg-white">
-        <div className="h-screen flex justify-center items-center  text-[#313131] text-8xl">
-          <h1>clement de roberti</h1>
+        <div className="h-screen flex justify-center items-center text-[#313131] text-8xl relative">
+          {/* Carré animé */}
+          <div className="absolute inset-0 flex justify-center items-center">
+            <div className="w-60 h-60 border-2 border-[#313131] animate-spin-slow"></div>
+          </div>
+          <h1 className="z-[1]">clement de roberti</h1>
         </div>
+
+        <style jsx>{`
+          @keyframes spin {
+            0% {
+              transform: rotate(0deg);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+
+          .animate-spin-slow {
+            animation: spin 30s linear infinite;
+          }
+        `}</style>
 
         {/* A propos */}
         <div className="h-screen flex items-center justify-center ">
@@ -22,12 +42,15 @@ export default function Home() {
               <h2 className="text-5xl">clement de roberti</h2>
               <h3 className="text-2xl mt-3">- communication digitale -</h3>
               <p className=" text-xl mt-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
-                similique perspiciatis! Consequuntur harum obcaecati qui,
-                suscipit, eligendi dolores dolore laudantium impedit ea vero
-                quia esse minus. Necessitatibus natus reprehenderit ducimus
-                aliquid possimus, veniam ea optio distinctio odio molestiae
-                minima ipsa inventore voluptatem sed. Odit, ad.
+                Etudiant de 21 ans et je suis passionne par le sport et la
+                montagne. Actuellement etudiant en alternance à l'Office de
+                Tourisme de Pralognan-la-Vanoise, j'occupe le poste d'assistant
+                communication 360°. J'ai l'opportunite de travailler sur une
+                variete de projets qui allient creativite, strategie et
+                communication, le tout dans un environnement qui me parle
+                enormement. Mon objectif est de developper mes competences dans
+                le domaine de la communication tout en partageant ma passion
+                pour la montagne et les activites de plein air.
               </p>
               <div className="flex gap-5 mt-6">
                 <a
@@ -84,9 +107,10 @@ export default function Home() {
             <figure className="mt-10">
               <blockquote className="text-center text-xl/8 font-semibold sm:text-2xl/9">
                 <p>
-                  “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                  expedita voluptas culpa sapiente alias molestiae. Numquam
-                  corrupti in laborum sed rerum et corporis.”
+                  “Évoluer dans un cadre comme Pralognan-la-Vanoise, veritable
+                  terre d'alpinisme et d'aventure, c'est avoir l'opportunite de
+                  vivre au coeur d'un terrain de jeu parfait pour les amoureux
+                  de la montagne.”
                 </p>
               </blockquote>
               <figcaption className="mt-10">
