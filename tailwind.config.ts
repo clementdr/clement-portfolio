@@ -13,7 +13,7 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        custom: ['"Unno"', "sans-serif"], // Ta police personnalisée ici
+        custom: ['"Unbounded"', "sans-serif"], // Ta police personnalisée ici
       },
     },
   },

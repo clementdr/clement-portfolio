@@ -9,7 +9,7 @@ export default function Home() {
           <div className="absolute inset-0 flex justify-center items-center">
             <div className="w-60 h-60 border-2 border-[#313131] animate-spin-slow"></div>
           </div>
-          <h1 className="z-[1]">clement de roberti</h1>
+          <h1 className="z-[1] text-7xl font-normal">Clément De Roberti</h1>
         </div>
 
         <style jsx>{`
@@ -38,19 +38,21 @@ export default function Home() {
               alt="Mon image"
               className="w-auto h-150 rounded-xl"
             />
-            <div className="flex flex-col mt-8">
-              <h2 className="text-5xl">clement de roberti</h2>
-              <h3 className="text-2xl mt-3">- communication digitale -</h3>
-              <p className=" text-xl mt-6">
-                Etudiant de 21 ans et je suis passionne par le sport et la
-                montagne. Actuellement etudiant en alternance à l'Office de
+            <div className="flex flex-col mt-6">
+              <h2 className="text-4xl font-normal">Clément De Roberti</h2>
+              <h3 className="text-xl font-light mt-3">
+                - Communication digitale -
+              </h3>
+              <p className=" text-base mt-3 font-thin">
+                Étudiant de 21 ans, je suis passionné par le sport et la
+                Montagne. Actuellement étudiant en alternance à l'Office de
                 Tourisme de Pralognan-la-Vanoise, j'occupe le poste d'assistant
-                communication 360°. J'ai l'opportunite de travailler sur une
-                variete de projets qui allient creativite, strategie et
+                Communication 360°. J'ai l'opportunité de travailler sur une
+                variété de projets qui allient créativité, stratégie et
                 communication, le tout dans un environnement qui me parle
-                enormement. Mon objectif est de developper mes competences dans
+                Énormément. Mon objectif est de développer mes compétences dans
                 le domaine de la communication tout en partageant ma passion
-                pour la montagne et les activites de plein air.
+                pour la montagne et les activités de plein air.
               </p>
               <div className="flex gap-5 mt-6">
                 <a
@@ -69,7 +71,7 @@ export default function Home() {
                       <path d="M0 0h24v24H0z" fill="none" />
                       <path
                         d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"
-                        fill-rule="nonzero"
+                        fillRule="nonzero"
                       />
                     </g>
                   </svg>
@@ -105,17 +107,16 @@ export default function Home() {
           <div className="mx-auto max-w-2xl lg:max-w-4xl">
             <img className="mx-auto h-12" src="../img/pralo.png" alt="" />
             <figure className="mt-10">
-              <blockquote className="text-center text-xl/8 font-semibold sm:text-2xl/9">
-                <p>
-                  “Évoluer dans un cadre comme Pralognan-la-Vanoise, veritable
-                  terre d'alpinisme et d'aventure, c'est avoir l'opportunite de
-                  vivre au coeur d'un terrain de jeu parfait pour les amoureux
-                  de la montagne.”
-                </p>
-              </blockquote>
+              <p className="text-center font-light text-2xl">
+                “Évoluer dans un cadre comme Pralognan-la-Vanoise, véritable
+                terre d'alpinisme et d'aventure, c'est avoir l'opportunité de
+                vivre au coeur d'un terrain de jeu parfait pour les amoureux de
+                la montagne.”
+              </p>
+
               <figcaption className="mt-10">
                 <div className="mt-4 flex items-center justify-center space-x-3 text-base">
-                  <div className="font-semibold">clement</div>
+                  <div className="font-light">clement</div>
                   <svg
                     viewBox="0 0 2 2"
                     width="3"
@@ -125,7 +126,7 @@ export default function Home() {
                   >
                     <circle cx="1" cy="1" r="1" />
                   </svg>
-                  <div className="text-gray-600">
+                  <div className="text-gray-600 font-thin">
                     assistant communication 360
                   </div>
                 </div>
@@ -135,6 +136,7 @@ export default function Home() {
         </section>
 
         {/* Galerie */}
+        <div className="min-h-screen"></div>
       </main>
     </>
   );

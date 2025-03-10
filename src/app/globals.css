@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Unno";
+  font-family: "Unbounded";
   font-style: normal;
-  src: url("/font/Unno.otf") format("opentype"); /* Chemin correct sans '/public' */
+  src: url("/font/Unbounded.ttf") format("truetype"); /* Chemin correct sans '/public' */
 }
 
 :root {
@@ -23,5 +23,5 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Unno", sans-serif; /* Applique ta font personnalisée ici */
+  font-family: "Unbounded", sans-serif; /* Applique ta font personnalisée ici */
 }
