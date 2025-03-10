@@ -1,5 +1,14 @@
 "use client";
+
+import { useState } from "react";
+
 export default function Home() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const images = Array.from(
+    { length: 11 },
+    (_, i) => `../img/gallerie/${i + 1}.jpg`
+  );
+
   return (
     <>
       {/* Hero */}
@@ -44,13 +53,13 @@ export default function Home() {
                 - Communication digitale -
               </h3>
               <p className=" text-base mt-3 font-thin">
-                Étudiant de 21 ans, je suis passionné par le sport et la
-                Montagne. Actuellement étudiant en alternance à l'Office de
-                Tourisme de Pralognan-la-Vanoise, j'occupe le poste d'assistant
-                Communication 360°. J'ai l'opportunité de travailler sur une
+                Étudiant de 21 ans, passionné par le sport et la montagne.
+                Actuellement en alternance à l'Office de Tourisme de
+                Pralognan-la-Vanoise, j'occupe le poste d'assistant
+                communication 360°. J'ai l'opportunité de travailler sur une
                 variété de projets qui allient créativité, stratégie et
                 communication, le tout dans un environnement qui me parle
-                Énormément. Mon objectif est de développer mes compétences dans
+                énormément. Mon objectif est de développer mes compétences dans
                 le domaine de la communication tout en partageant ma passion
                 pour la montagne et les activités de plein air.
               </p>
@@ -116,7 +125,7 @@ export default function Home() {
 
               <figcaption className="mt-10">
                 <div className="mt-4 flex items-center justify-center space-x-3 text-base">
-                  <div className="font-light">clement</div>
+                  <div className="font-light">Clément</div>
                   <svg
                     viewBox="0 0 2 2"
                     width="3"
@@ -127,7 +136,7 @@ export default function Home() {
                     <circle cx="1" cy="1" r="1" />
                   </svg>
                   <div className="text-gray-600 font-thin">
-                    assistant communication 360
+                    assistant communication 360°
                   </div>
                 </div>
               </figcaption>
@@ -136,6 +145,34 @@ export default function Home() {
         </section>
 
         {/* Galerie */}
+        <div className="min-h-screen grid grid-cols-3 gap-3 m-20">
+          {images.map((src, index) => (
+            <div key={index} className="overflow-hidden rounded-lg">
+              <img
+                src={src}
+                alt="Photo de la galerie"
+                className="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer"
+                onClick={() => setSelectedImage(src)}
+              />
+            </div>
+          ))}
+
+          {/* Lightbox */}
+          {selectedImage && (
+            <div
+              className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+              onClick={() => setSelectedImage(null)}
+            >
+              <img
+                src={selectedImage}
+                alt="Photo de la galerie"
+                className="max-w-5xl max-h-[90vh] rounded-lg shadow-lg"
+              />
+            </div>
+          )}
+        </div>
+
+        {/* Projet */}
         <div className="min-h-screen"></div>
       </main>
     </>
