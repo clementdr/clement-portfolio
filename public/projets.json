@@ -129,7 +129,7 @@
   {
     "id": 8,
     "nom": "Système Arduino SAE501",
-    "categorie": "École, éléctronique, évaluation",
+    "categorie": "École, éléctronique, Arduino, évaluation",
     "ue": "/",
     "task": "Comprendre le système Arduino et créer un premier branchement simple.",
     "livrable": "Allumer une LED à l’aide d’un bouton poussoir.",
@@ -165,7 +165,7 @@
   {
     "id": 10,
     "nom": "Schéma de cablage SAE501",
-    "categorie": "École, modélisation 3D, évaluation",
+    "categorie": "École, éléctronique, Arduino, évaluation",
     "ue": "/",
     "task": "Comprendre le système Arduino et réaliser un schéma de câblage.",
     "livrable": "Schéma de câblage.",

@@ -70,7 +70,7 @@ export default function Projets() {
       <div className="w-screen p-10 shadow-xl bg-white rounded-xl">
         <div className="flex justify-between items-center mb-6">
           <div>
-            <h2 className="text-2xl font-normal">Projets</h2>
+            <h2 className="text-2xl font-light">Projets</h2>
             <p className="text-gray-500">
               Découvrez mes différents projets. Cliquez sur "Voir" pour plus de
               détails.
@@ -145,15 +145,102 @@ export default function Projets() {
               <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all w-full m-10">
                 <div className="bg-white px-4 pt-5 pb-4 ">
                   <div className="sm:flex sm:items-start">
-                    <div className="mt-3">
-                      <h3 className="text-lg leading-6 font-medium text-gray-900">
+                    <div className="mt-1">
+                      <h3 className="text-xl leading-6 font-medium text-gray-900">
                         {selectedProjet.nom}
                       </h3>
                       <div className="mt-2">
-                        <p className="text-sm text-gray-500">
+                        <p className="font-medium text-sm">Catégorie :</p>
+                        <p className="font-light text-sm text-gray-500">
+                          {selectedProjet.categorie}
+                        </p>
+                      </div>
+                      <div className="mt-2">
+                        <p className="font-medium text-sm">
+                          Unité d'Enseignement :
+                        </p>
+                        <p className="font-light text-sm text-gray-500">
+                          {selectedProjet.ue}
+                        </p>
+                      </div>
+                      <div className="mt-2">
+                        <p className="font-medium text-sm">Tâche :</p>
+                        <p className="font-light text-sm text-gray-500">
+                          {selectedProjet.task}
+                        </p>
+                      </div>
+                      <div className="mt-2">
+                        <p className="font-medium text-sm">Livrable :</p>
+                        <p className="font-light text-sm text-gray-500">
+                          {selectedProjet.livrable}
+                        </p>
+                      </div>
+                      <div className="mt-2">
+                        <p className="font-medium text-sm">
+                          Explication ou analyse réflective :
+                        </p>
+                        <p className="font-light text-sm text-gray-500">
                           {selectedProjet.analyse}
                         </p>
-
+                      </div>
+                      <div className="mt-2">
+                        <p className="font-medium text-sm">
+                          Quelle méthode ai-je suivi :
+                        </p>
+                        <p className="font-light text-sm text-gray-500">
+                          {selectedProjet.methode}
+                        </p>
+                      </div>
+                      <div className="mt-2">
+                        <p className="font-medium text-sm">
+                          Quels savoirs, savoir-faire et savoir-être ai-je
+                          mobilisé :
+                        </p>
+                        <p className="font-light text-sm text-gray-500">
+                          {selectedProjet.savoirs}
+                        </p>
+                      </div>
+                      <div className="mt-2">
+                        <p className="font-medium text-sm">
+                          Quelles ressources externes ai-je mobilisé :
+                        </p>
+                        <p className="font-light text-sm text-gray-500">
+                          {selectedProjet.ressources}
+                        </p>
+                      </div>
+                      <div className="mt-2">
+                        <p className="font-medium text-sm">
+                          Quelle(s) amélioration(s) pourrais-je prévoir pour une
+                          prochaine fois :
+                        </p>
+                        <p className=" font-light text-sm text-gray-500">
+                          {selectedProjet.ameliorations}
+                        </p>
+                      </div>
+                      <div className="mt-2">
+                        <p className="font-medium text-sm">
+                          Composantes Essentielles (C.E) et Apprentissages
+                          Critiques (A.C) associés :
+                        </p>
+                        <p className="font-light text-sm text-gray-500">
+                          {selectedProjet.CEAC}
+                        </p>
+                      </div>
+                      <div className="mt-2">
+                        <p className="font-medium text-sm">Mon rôle :</p>
+                        <p className="font-light text-sm text-gray-500">
+                          {selectedProjet.role}
+                        </p>
+                      </div>
+                      <div className="mt-2">
+                        <p className="font-medium text-sm">
+                          Ce que j'ai appris :
+                        </p>
+                        <p className="font-light text-sm text-gray-500">
+                          {selectedProjet.apprentissage}
+                        </p>
+                      </div>
+                      <div className="mt-2">
                         {selectedProjet.lien && (
                           <p className="mt-2 text-sm text-blue-600 hover:underline">
                             <a
