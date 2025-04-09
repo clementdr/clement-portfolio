@@ -8,7 +8,16 @@ interface Projet {
   nom: string;
   categorie: string;
   ue: string;
-  description?: string;
+  task?: string;
+  livrable?: string;
+  analyse?: string;
+  methode?: string;
+  savoirs?: string;
+  ressources?: string;
+  ameliorations?: string;
+  CEAC?: string;
+  role?: string;
+  apprentissage?: string;
   image1?: string;
   lien?: string;
 }
@@ -136,14 +145,15 @@ export default function Projets() {
               <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all w-full m-10">
                 <div className="bg-white px-4 pt-5 pb-4 ">
                   <div className="sm:flex sm:items-start">
-                    <div className="mt-3 text-center ">
+                    <div className="mt-3">
                       <h3 className="text-lg leading-6 font-medium text-gray-900">
                         {selectedProjet.nom}
                       </h3>
                       <div className="mt-2">
                         <p className="text-sm text-gray-500">
-                          {selectedProjet.description}
+                          {selectedProjet.analyse}
                         </p>
+
                         {selectedProjet.lien && (
                           <p className="mt-2 text-sm text-blue-600 hover:underline">
                             <a
