@@ -12,11 +12,9 @@ interface Projet {
   livrable?: string;
   analyse?: string;
   methode?: string;
-  savoirs?: string;
   ressources?: string;
   ameliorations?: string;
   CEAC?: string;
-  role?: string;
   apprentissage?: string;
   image1?: string;
   lien?: string;
@@ -103,7 +101,7 @@ export default function Projets() {
                   </div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="text-sm text-gray-500">
+                  <div className="text-sm text-gray-500 max-w-xs">
                     {projet.categorie}
                   </div>
                 </td>
@@ -193,15 +191,6 @@ export default function Projets() {
                       </div>
                       <div className="mt-2">
                         <p className="font-medium text-sm">
-                          Quels savoirs, savoir-faire et savoir-être ai-je
-                          mobilisé :
-                        </p>
-                        <p className="font-light text-sm text-gray-500">
-                          {selectedProjet.savoirs}
-                        </p>
-                      </div>
-                      <div className="mt-2">
-                        <p className="font-medium text-sm">
                           Quelles ressources externes ai-je mobilisé :
                         </p>
                         <p className="font-light text-sm text-gray-500">
@@ -227,18 +216,21 @@ export default function Projets() {
                         </p>
                       </div>
                       <div className="mt-2">
-                        <p className="font-medium text-sm">Mon rôle :</p>
-                        <p className="font-light text-sm text-gray-500">
-                          {selectedProjet.role}
-                        </p>
-                      </div>
-                      <div className="mt-2">
                         <p className="font-medium text-sm">
                           Ce que j'ai appris :
                         </p>
                         <p className="font-light text-sm text-gray-500">
                           {selectedProjet.apprentissage}
                         </p>
+                      </div>
+                      <div className="mt-2">
+                        {selectedProjet.image1 && (
+                          <img
+                            src={selectedProjet.image1}
+                            alt={selectedProjet.nom}
+                            className="mt-4 max-w-full h-auto"
+                          />
+                        )}
                       </div>
                       <div className="mt-2">
                         {selectedProjet.lien && (
@@ -251,13 +243,6 @@ export default function Projets() {
                               Voir le projet
                             </a>
                           </p>
-                        )}
-                        {selectedProjet.image1 && (
-                          <img
-                            src={selectedProjet.image1}
-                            alt={selectedProjet.nom}
-                            className="mt-4 max-w-full h-auto"
-                          />
                         )}
                       </div>
                     </div>
