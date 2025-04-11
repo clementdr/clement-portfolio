@@ -1,35 +1,31 @@
 const Stats = () => (
-  <div className="h-screen flex items-center justify-center">
-    <div className="grid grid-cols-3 grid-rows-2 gap-5 w-full h-full p-20 text-center">
-      <div className="shadow-2xl col-start-1 row-span-2 rounded-s-xl" dir="ltr">
-        <div className="w-full h-full bg-white rounded-s-xl p-5 flex flex-col justify-around gap-5">
-          <h3 className="text-base font-medium">Nouveaux abonnés</h3>
-          <h3 className="text-base font-medium">Impression du profil</h3>
-          <h3 className="text-base font-medium">Visites du profil</h3>
-        </div>
-      </div>
-      <div className="shadow-2xl col-start-2 row-start-1 row-span-1">
-        <div className="w-full h-full bg-white p-5 flex flex-col justify-center">
-          <h3 className="text-base font-medium">Meilleur publication</h3>
-        </div>
-      </div>
-      <div className="shadow-2xl col-start-2 row-start-2 row-span-1">
-        <div className="w-full h-full bg-white p-5 flex flex-col justify-center">
-          <h3 className="text-base font-medium">Meilleur publication</h3>
-        </div>
-      </div>
-      <div className="shadow-2xl col-start-3 row-span-2 rounded-s-xl" dir="rtl">
-        <div className="w-full h-full bg-white rounded-s-xl p-5 flex flex-col justify-around gap-5">
-          <h3 className="text-base font-medium">Nombre de publications</h3>
-          <h3 className="text-base font-medium">
-            Impressions des publications
-          </h3>
-          <h3 className="text-base font-medium">
-            Intercations avec les publications
-          </h3>
-        </div>
-      </div>
+  <div className="h-screen py-24 flex flex-col justify-center align-content-center gap-20">
+    <div className="text-center">
+      <h2 className="text-4xl font-semibold tracking-tight">
+        Statistiques Instagram Pralognan-la-Vanoise
+      </h2>
+      <p className="mt-2 text-base text-gray-600">
+        Découvrez les statistiques sur les périodes du{" "}
+        <span className="text-red-800 font-medium">
+          01/08/2023 au 01/04/2024
+        </span>{" "}
+        et du <span className="font-medium">01/08/2024 au 01/04/2025</span>.
+      </p>
     </div>
+    <dl className="flex text-center justify-around ">
+      <div className="flex flex-col">
+        <h3 className="text-2xl font-semibold ">995 914 impressions</h3>
+        <h4 className="text-base/7 text-red-800">+45% from 683 191</h4>
+      </div>
+      <div className="flex flex-col">
+        <h3 className="text-2xl font-semibold">310 publications</h3>
+        <h4 className="text-base/7 text-red-800">+47,8% from 209</h4>
+      </div>
+      <div className="flex flex-col">
+        <h3 className="text-2xl font-semibold"> 57 508 interactions</h3>
+        <h4 className="text-base/7 text-red-800">+126% 25 418</h4>
+      </div>
+    </dl>
   </div>
 );
 
