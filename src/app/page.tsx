@@ -9,6 +9,7 @@ import Citation from "@/components/Citation";
 import Galerie from "@/components/Galerie";
 import Projet from "@/components/Projets";
 import Coulisses from "@/components/Coulisses";
+import Resume from "@/components/Resume";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Citation />
       <Galerie />
       <Coulisses />
+      <Resume />
     </main>
   );
 }

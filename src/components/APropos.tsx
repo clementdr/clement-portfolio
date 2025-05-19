@@ -13,7 +13,9 @@ const APropos = () => (
       />
       <div className="flex flex-col mt-6">
         <h2 className="text-4xl font-normal">Clément De Roberti</h2>
-        <h3 className="text-xl font-light mt-3">- Communication -</h3>
+        <h3 className="text-xl font-light mt-3">
+          - Assistant Communication 360° -
+        </h3>
         <p className=" text-base mt-3 font-thin">
           Étudiant de 21 ans, passionné par le sport et la montagne.
           Actuellement en alternance à l'Office de Tourisme de
