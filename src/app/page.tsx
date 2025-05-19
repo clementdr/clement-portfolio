@@ -8,7 +8,7 @@ import APropos from "@/components/APropos";
 import Citation from "@/components/Citation";
 import Galerie from "@/components/Galerie";
 import Projet from "@/components/Projets";
-import Stats from "@/components/Stats";
+import Coulisses from "@/components/Coulisses";
 
 export default function Home() {
   return (
@@ -18,10 +18,10 @@ export default function Home() {
       </div>
       <Hero />
       <APropos />
-      <Citation />
       <Projet />
+      <Citation />
       <Galerie />
-      <Stats />
+      <Coulisses />
     </main>
   );
 }

@@ -68,7 +68,7 @@ export default function Projets() {
       <div className="w-screen p-10 shadow-xl bg-white rounded-xl">
         <div className="flex justify-between items-center mb-6">
           <div>
-            <h2 className="text-2xl font-light">Projets</h2>
+            <h2 className="text-2xl font-semibold">Projets</h2>
             <p className="text-gray-500">
               Découvrez mes différents projets. Cliquez sur "Voir" pour plus de
               détails.

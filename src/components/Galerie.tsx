@@ -6,7 +6,7 @@ import Image from "next/image";
 const Galerie = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const images = Array.from(
-    { length: 12 },
+    { length: 15 },
     (_, i) => `/img/gallerie/${i + 1}.jpg`
   );
 
