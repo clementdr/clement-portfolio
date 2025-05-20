@@ -31,6 +31,7 @@ const ResumeItem = ({
         height="24"
         viewBox="0 0 24 24"
         width="24"
+        className="max-sm:w-[100px]"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path d={icon} fill="#212121" />
@@ -73,8 +74,8 @@ const Resume = () => {
   ];
 
   return (
-    <section className="min-h-fit m-20">
-      <div className="flex justify-between">
+    <section className="min-h-fit m-20 max-sm:m-10">
+      <div className="flex justify-between max-sm:flex-col-reverse gap-10">
         <div className="flex flex-col gap-3 max-w-[700px]">
           <h5 className="text-blue-600 font-medium">
             Situation d'apprentissage
@@ -96,11 +97,11 @@ const Resume = () => {
             ))}
           </div>
         </div>
-        <div className="overflow-hidden w-[450px]" dir="ltr">
+        <div className="overflow-hidden w-[450px] max-sm:w-full" dir="ltr">
           <img
             src="../img/clement2.jpeg"
             alt="Mon image"
-            className="w-auto h-600px rounded-s-2xl overflow-hidden"
+            className="w-auto h-600px rounded-s-2xl overflow-hidden max-sm:w-60 max-sm:auto max-sm:rounded-2xl"
           />
         </div>
       </div>

@@ -76,7 +76,7 @@ const Coulisses = () => {
   }, [isModalOpen]);
 
   return (
-    <section className="min-h-screen flex flex-col justify-center m-20">
+    <section className="min-h-screen flex flex-col justify-center m-20 max-sm:m-10">
       <div className="text-center flex flex-col gap-y-10 shadow-2xl bg-white rounded-xl p-10">
         <div className="flex flex-col gap-y-2">
           <h2 className="text-4xl font-medium">
@@ -122,7 +122,7 @@ const Coulisses = () => {
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
-                className="rounded-xl"
+                className="rounded-xl max-sm:w-[200px] max-sm:h-auto"
               ></iframe>
               <h4 className="mt-2 font-medium">{videos[current].title}</h4>
             </div>

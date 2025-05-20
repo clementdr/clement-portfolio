@@ -1,15 +1,15 @@
 import Image from "next/image";
 
 const APropos = () => (
-  <div className="min-h-screen flex items-center justify-center ">
+  <div className="min-h-screen flex items-center justify-center max-sm:m-10">
     <div
-      className="flex justify-center gap-20 p-10 shadow-2xl bg-white rounded-xl"
+      className="flex justify-center gap-20 p-10 shadow-2xl bg-white rounded-xl max-sm:flex-col max-sm:gap-10 max-sm:p-5"
       style={{ width: "1100px" }}
     >
       <img
         src="../img/clement.jpeg"
         alt="Mon image"
-        className="w-auto h-150 rounded-xl"
+        className="w-auto h-150 rounded-xl max-sm:w-80"
       />
       <div className="flex flex-col mt-6">
         <h2 className="text-4xl font-normal">Clément De Roberti</h2>

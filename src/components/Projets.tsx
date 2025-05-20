@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import Json from "../../public/projets.json";
 
@@ -24,6 +24,7 @@ export default function Projets() {
   const [projets, setProjets] = useState<Projet[]>([]);
   const [selectedProjet, setSelectedProjet] = useState<Projet | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Fonction pour charger les données depuis le fichier JSON
@@ -51,20 +52,27 @@ export default function Projets() {
   };
 
   useEffect(() => {
+    // Add overflow: hidden to body when modal is open
     if (isModalOpen) {
-      document.body.classList.add("overflow-hidden");
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.classList.remove("overflow-hidden");
+      document.body.style.overflow = "unset"; // Or '' to revert to default
     }
 
-    // Nettoyage de l'effet : s'assure que la classe est supprimée lors du démontage du composant
+    // Cleanup: Remove the style when the component unmounts or modal closes
     return () => {
-      document.body.classList.remove("overflow-hidden");
+      document.body.style.overflow = "unset";
     };
   }, [isModalOpen]);
 
+  useEffect(() => {
+    if (isModalOpen && modalRef.current) {
+      modalRef.current.scrollTop = 0;
+    }
+  }, [isModalOpen]);
+
   return (
-    <div className="min-h-screen flex justify-center items-center mx-20">
+    <div className="min-h-screen flex justify-center items-center m-20 max-sm:m-10">
       <div className="w-screen p-10 shadow-xl bg-white rounded-xl">
         <div className="flex justify-between items-center mb-6">
           <div>
@@ -81,10 +89,10 @@ export default function Projets() {
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Nom
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider max-sm:hidden">
                 Catégorie
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider max-sm:hidden">
                 UE
               </th>
               <th className="relative px-6 py-3">
@@ -95,17 +103,17 @@ export default function Projets() {
           <tbody className="bg-white divide-y divide-gray-200">
             {projets.map((projet) => (
               <tr key={projet.id}>
-                <td className="px-6 py-4 whitespace-nowrap">
+                <td className="px-6 py-4 whitespace-nowrap max-sm:max-w-xs max-sm:whitespace-normal">
                   <div className="text-sm font-medium text-gray-900">
                     {projet.nom}
                   </div>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap">
+                <td className="px-6 py-4 whitespace-nowrap max-sm:hidden">
                   <div className="text-sm text-gray-500 max-w-xs">
                     {projet.categorie}
                   </div>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap">
+                <td className="px-6 py-4 whitespace-nowrap max-sm:hidden">
                   <span className="px-2 inline-flex text-xs leading-5 font-medium rounded-full bg-gray-100 text-gray-800">
                     {projet.ue}
                   </span>
@@ -125,138 +133,118 @@ export default function Projets() {
 
         {/* Popup Modal */}
         {isModalOpen && selectedProjet && (
-          <div className="fixed z-10 inset-0 overflow-y-auto">
-            <div className="flex items-center justify-center min-h-screen text-center ">
-              <div
-                className="fixed inset-0 transition-opacity"
-                aria-hidden="true"
-              >
-                <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div
+              className="bg-white rounded-lg p-8 w-full m-10 shadow-2xl overflow-y-auto max-h-[80vh]"
+              ref={modalRef}
+            >
+              <h2 className="text-2xl font-semibold mb-4">
+                {selectedProjet.nom}
+              </h2>
+
+              <div className="mt-2">
+                <p className="font-medium text-sm">Catégorie :</p>
+                <p className="font-light text-sm text-gray-500">
+                  {selectedProjet.categorie}
+                </p>
               </div>
-              <span
-                className="hidden sm:inline-block sm:align-middle "
-                aria-hidden="true"
-              >
-                &#8203;
-              </span>
-              {/* Contenu */}
-              <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all w-full m-10">
-                <div className="bg-white px-4 pt-5 pb-4 ">
-                  <div className="sm:flex sm:items-start">
-                    <div className="mt-1">
-                      <h3 className="text-xl leading-6 font-medium text-gray-900">
-                        {selectedProjet.nom}
-                      </h3>
-                      <div className="mt-2">
-                        <p className="font-medium text-sm">Catégorie :</p>
-                        <p className="font-light text-sm text-gray-500">
-                          {selectedProjet.categorie}
-                        </p>
-                      </div>
-                      <div className="mt-2">
-                        <p className="font-medium text-sm">
-                          Unité d'Enseignement :
-                        </p>
-                        <p className="font-light text-sm text-gray-500">
-                          {selectedProjet.ue}
-                        </p>
-                      </div>
-                      <div className="mt-2">
-                        <p className="font-medium text-sm">Tâche :</p>
-                        <p className="font-light text-sm text-gray-500">
-                          {selectedProjet.task}
-                        </p>
-                      </div>
-                      <div className="mt-2">
-                        <p className="font-medium text-sm">Livrable :</p>
-                        <p className="font-light text-sm text-gray-500">
-                          {selectedProjet.livrable}
-                        </p>
-                      </div>
-                      <div className="mt-2">
-                        <p className="font-medium text-sm">
-                          Explication ou analyse réflective :
-                        </p>
-                        <p className="font-light text-sm text-gray-500">
-                          {selectedProjet.analyse}
-                        </p>
-                      </div>
-                      <div className="mt-2">
-                        <p className="font-medium text-sm">
-                          Quelle méthode ai-je suivi :
-                        </p>
-                        <p className="font-light text-sm text-gray-500">
-                          {selectedProjet.methode}
-                        </p>
-                      </div>
-                      <div className="mt-2">
-                        <p className="font-medium text-sm">
-                          Quelles ressources externes ai-je mobilisé :
-                        </p>
-                        <p className="font-light text-sm text-gray-500">
-                          {selectedProjet.ressources}
-                        </p>
-                      </div>
-                      <div className="mt-2">
-                        <p className="font-medium text-sm">
-                          Quelle(s) amélioration(s) pourrais-je prévoir pour une
-                          prochaine fois :
-                        </p>
-                        <p className=" font-light text-sm text-gray-500">
-                          {selectedProjet.ameliorations}
-                        </p>
-                      </div>
-                      <div className="mt-2">
-                        <p className="font-medium text-sm">
-                          Composantes Essentielles (C.E) et Apprentissages
-                          Critiques (A.C) associés :
-                        </p>
-                        <p className="font-light text-sm text-gray-500">
-                          {selectedProjet.CEAC}
-                        </p>
-                      </div>
-                      <div className="mt-2">
-                        <p className="font-medium text-sm">
-                          Ce que j'ai appris :
-                        </p>
-                        <p className="font-light text-sm text-gray-500">
-                          {selectedProjet.apprentissage}
-                        </p>
-                      </div>
-                      <div className="mt-2">
-                        {selectedProjet.image1 && (
-                          <img
-                            src={selectedProjet.image1}
-                            alt={selectedProjet.nom}
-                            className="mt-4 max-w-full h-auto"
-                          />
-                        )}
-                      </div>
-                      <div className="mt-2">
-                        {selectedProjet.lien && (
-                          <p className="mt-2 text-sm text-blue-600 hover:underline">
-                            <a
-                              href={selectedProjet.lien}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              Voir le projet
-                            </a>
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                  <button
-                    type="button"
-                    className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                    onClick={handleCloseModal}
-                  >
-                    Fermer
-                  </button>
-                </div>
+              <div className="mt-2">
+                <p className="font-medium text-sm">Unité d'Enseignement :</p>
+                <p className="font-light text-sm text-gray-500">
+                  {selectedProjet.ue}
+                </p>
+              </div>
+              <div className="mt-2">
+                <p className="font-medium text-sm">Tâche :</p>
+                <p className="font-light text-sm text-gray-500">
+                  {selectedProjet.task}
+                </p>
+              </div>
+              <div className="mt-2">
+                <p className="font-medium text-sm">Livrable :</p>
+                <p className="font-light text-sm text-gray-500">
+                  {selectedProjet.livrable}
+                </p>
+              </div>
+              <div className="mt-2">
+                <p className="font-medium text-sm">
+                  Explication ou analyse réflective :
+                </p>
+                <p className="font-light text-sm text-gray-500">
+                  {selectedProjet.analyse}
+                </p>
+              </div>
+              <div className="mt-2">
+                <p className="font-medium text-sm">
+                  Quelle méthode ai-je suivi :
+                </p>
+                <p className="font-light text-sm text-gray-500">
+                  {selectedProjet.methode}
+                </p>
+              </div>
+              <div className="mt-2">
+                <p className="font-medium text-sm">
+                  Quelles ressources externes ai-je mobilisé :
+                </p>
+                <p className="font-light text-sm text-gray-500">
+                  {selectedProjet.ressources}
+                </p>
+              </div>
+              <div className="mt-2">
+                <p className="font-medium text-sm">
+                  Quelle(s) amélioration(s) pourrais-je prévoir pour une
+                  prochaine fois :
+                </p>
+                <p className=" font-light text-sm text-gray-500">
+                  {selectedProjet.ameliorations}
+                </p>
+              </div>
+              <div className="mt-2">
+                <p className="font-medium text-sm">
+                  Composantes Essentielles (C.E) et Apprentissages Critiques
+                  (A.C) associés :
+                </p>
+                <p className="font-light text-sm text-gray-500">
+                  {selectedProjet.CEAC}
+                </p>
+              </div>
+              <div className="mt-2">
+                <p className="font-medium text-sm">Ce que j'ai appris :</p>
+                <p className="font-light text-sm text-gray-500">
+                  {selectedProjet.apprentissage}
+                </p>
+              </div>
+              <div className="mt-2">
+                {selectedProjet.image1 && (
+                  <img
+                    src={selectedProjet.image1}
+                    alt={selectedProjet.nom}
+                    className="mt-4 max-w-full h-auto"
+                  />
+                )}
+              </div>
+              <div className="mt-2">
+                {selectedProjet.lien && (
+                  <p className="mt-2 text-sm text-blue-600 hover:underline">
+                    <a
+                      href={selectedProjet.lien}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Voir le projet
+                    </a>
+                  </p>
+                )}
+              </div>
+
+              <div className="flex justify-end">
+                <button
+                  type="button"
+                  className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                  onClick={handleCloseModal}
+                >
+                  Fermer
+                </button>
               </div>
             </div>
           </div>

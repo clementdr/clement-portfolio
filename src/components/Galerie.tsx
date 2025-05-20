@@ -11,7 +11,7 @@ const Galerie = () => {
   );
 
   return (
-    <div className="min-h-screen grid grid-cols-3 gap-3 m-20">
+    <div className="min-h-screen grid grid-cols-3 gap-3 m-20 max-sm:m-10 max-sm:grid-cols-2 max-sm:gap-2">
       {images.map((src, index) => (
         <div key={index} className="overflow-hidden rounded-lg">
           <img
@@ -30,7 +30,7 @@ const Galerie = () => {
           <img
             src={selectedImage}
             alt="Photo de la galerie"
-            className="max-w-5xl max-h-[90vh] rounded-lg shadow-lg"
+            className="max-w-5xl max-h-[90vh] rounded-lg shadow-lg max-sm:max-w-[90%] max-sm:max-h-[80vh] transition-transform duration-300"
           />
         </div>
       )}

@@ -1,5 +1,5 @@
 const Portfolio = () => (
-  <section className="min-h-screen m-20">
+  <section className="min-h-screen m-20 max-sm:m-10">
     <div>
       <div className="px-4 sm:px-0">
         <h3 className="text-4xl font-semibold ">Projet Portfolio</h3>
@@ -88,10 +88,10 @@ const Portfolio = () => (
                 <li className="flex items-center justify-between py-4 pr-5 pl-4 text-sm/6">
                   <div className="flex w-0 flex-1 items-center">
                     <div className="ml-4 flex min-w-0 flex-1 gap-2">
-                      <span className="truncate font-medium">
-                        Gestion du projet
+                      <span className=" font-medium">Gestion du projet</span>
+                      <span className="shrink-0 text-gray-400 max-md:hidden">
+                        Github
                       </span>
-                      <span className="shrink-0 text-gray-400">Github</span>
                     </div>
                   </div>
                   <div className="ml-4 shrink-0">
@@ -107,8 +107,8 @@ const Portfolio = () => (
                 <li className="flex items-center justify-between py-4 pr-5 pl-4 text-sm/6">
                   <div className="flex w-0 flex-1 items-center">
                     <div className="ml-4 flex min-w-0 flex-1 gap-2">
-                      <span className="truncate font-medium">Inspiration</span>
-                      <span className="shrink-0 text-gray-400">
+                      <span className=" font-medium">Inspiration</span>
+                      <span className="shrink-0 text-gray-400 max-md:hidden">
                         Portfolio de David McGillivray
                       </span>
                     </div>

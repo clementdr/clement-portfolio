@@ -1,7 +1,7 @@
 "use client";
 
 const Hero = () => (
-  <div className="min-h-screen flex justify-center items-center text-[#313131] text-8xl relative">
+  <div className="min-h-screen flex justify-center items-center text-[#313131] text-8xl relative max-sm:p-10 max-sm:text-xl">
     <div className="absolute inset-0 flex justify-center items-center">
       <div className="w-60 h-60 border-2 border-[#313131] animate-spin-slow"></div>
     </div>
