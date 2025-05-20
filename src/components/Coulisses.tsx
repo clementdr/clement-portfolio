@@ -77,7 +77,7 @@ const Coulisses = () => {
 
   return (
     <section className="min-h-screen flex flex-col justify-center m-20 max-sm:m-10">
-      <div className="text-center flex flex-col gap-y-10 shadow-2xl bg-white rounded-xl p-10">
+      <div className="text-center flex flex-col gap-y-10 shadow-2xl bg-white rounded-xl p-10 max-sm:p-5">
         <div className="flex flex-col gap-y-2">
           <h2 className="text-4xl font-medium">
             Les coulisses du domaine skiable
@@ -90,7 +90,7 @@ const Coulisses = () => {
           </p>
         </div>
 
-        <dl className="flex flex-wrap w-full content-between">
+        <dl className="flex w-full content-between max-sm:flex-col max-sm:gap-y-4">
           {stats.map((stat) => (
             <div
               key={stat.id}
@@ -122,7 +122,7 @@ const Coulisses = () => {
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
-                className="rounded-xl max-sm:w-[200px] max-sm:h-auto"
+                className="rounded-xl max-sm:w-[200px] max-sm:h-auto max-lg:w-[500px]"
               ></iframe>
               <h4 className="mt-2 font-medium">{videos[current].title}</h4>
             </div>

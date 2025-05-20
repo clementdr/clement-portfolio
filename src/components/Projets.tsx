@@ -73,7 +73,7 @@ export default function Projets() {
 
   return (
     <div className="min-h-screen flex justify-center items-center m-20 max-sm:m-10">
-      <div className="w-screen p-10 shadow-xl bg-white rounded-xl">
+      <div className="w-screen p-10 shadow-xl bg-white rounded-xl max-sm:p-5">
         <div className="flex justify-between items-center mb-6">
           <div>
             <h2 className="text-2xl font-semibold">Projets</h2>
@@ -89,10 +89,10 @@ export default function Projets() {
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Nom
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider max-sm:hidden">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider max-md:hidden">
                 Catégorie
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider max-sm:hidden">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider max-xl:hidden">
                 UE
               </th>
               <th className="relative px-6 py-3">
@@ -108,12 +108,12 @@ export default function Projets() {
                     {projet.nom}
                   </div>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap max-sm:hidden">
+                <td className="px-6 py-4 whitespace-nowrap max-md:hidden">
                   <div className="text-sm text-gray-500 max-w-xs">
                     {projet.categorie}
                   </div>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap max-sm:hidden">
+                <td className="px-6 py-4 whitespace-nowrap max-xl:hidden">
                   <span className="px-2 inline-flex text-xs leading-5 font-medium rounded-full bg-gray-100 text-gray-800">
                     {projet.ue}
                   </span>
