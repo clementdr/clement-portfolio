@@ -155,12 +155,6 @@ const Coulisses = () => {
             <h2 className="text-2xl font-semibold mb-4">
               Informations Complémentaires
             </h2>
-            <div className="mb-4">
-              <h3 className="text-lg font-semibold text-gray-700">
-                Catégorie :
-              </h3>
-              <p className="text-gray-600">Événement, Entreprise, Vidéo</p>
-            </div>
 
             <div className="mb-4">
               <h3 className="text-lg font-semibold text-gray-700">Tâche :</h3>

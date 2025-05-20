@@ -10,6 +10,8 @@ import Galerie from "@/components/Galerie";
 import Projet from "@/components/Projets";
 import Coulisses from "@/components/Coulisses";
 import Resume from "@/components/Resume";
+import Portfolio from "@/components/Portfolio";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -20,10 +22,12 @@ export default function Home() {
       <Hero />
       <APropos />
       <Projet />
+      <Portfolio />
       <Citation />
       <Galerie />
       <Coulisses />
       <Resume />
+      <Footer />
     </main>
   );
 }

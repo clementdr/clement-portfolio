@@ -73,7 +73,7 @@ const Resume = () => {
   ];
 
   return (
-    <section className="min-h-screen p-20">
+    <section className="min-h-fit m-20">
       <div className="flex justify-between">
         <div className="flex flex-col gap-3 max-w-[700px]">
           <h5 className="text-blue-600 font-medium">

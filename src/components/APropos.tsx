@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const APropos = () => (
-  <div className="h-screen flex items-center justify-center ">
+  <div className="min-h-screen flex items-center justify-center ">
     <div
       className="flex justify-center gap-20 p-10 shadow-2xl bg-white rounded-xl"
       style={{ width: "1100px" }}
