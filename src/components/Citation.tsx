@@ -6,9 +6,9 @@ const Citation = () => (
       <img className="mx-auto h-12" src="../img/pralo.png" alt="" />
       <figure className="mt-10">
         <p className="text-center font-light text-2xl">
-          “Évoluer dans un cadre comme Pralognan-la-Vanoise, véritable terre
-          d'alpinisme et d'aventure, c'est avoir l'opportunité de vivre au coeur
-          d'un terrain de jeu parfait pour les amoureux de la montagne.”
+          “Évoluer à Pralognan-la-Vanoise, véritable écrin d’alpinisme et
+          d’aventure, c’est s’immerger dans un terrain de jeu naturel, rêvé par
+          tous les passionnés de montagne.”
         </p>
 
         <figcaption className="mt-10">

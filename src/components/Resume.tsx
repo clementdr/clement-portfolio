@@ -75,7 +75,7 @@ const Resume = () => {
 
   return (
     <section className="min-h-fit m-20 max-sm:m-10">
-      <div className="flex justify-between max-sm:flex-col-reverse gap-10">
+      <div className="flex justify-between max-xl:flex-col-reverse gap-10">
         <div className="flex flex-col gap-3 max-w-[700px]">
           <h5 className="text-blue-600 font-medium">
             Situation d'apprentissage
@@ -101,7 +101,7 @@ const Resume = () => {
           <img
             src="../img/clement2.jpeg"
             alt="Mon image"
-            className="w-auto h-600px rounded-s-2xl overflow-hidden max-sm:w-60 max-sm:auto max-sm:rounded-2xl"
+            className="w-auto h-600px rounded-s-2xl overflow-hidden max-xl:w-60 max-sm:auto max-xl:rounded-2xl"
           />
         </div>
       </div>

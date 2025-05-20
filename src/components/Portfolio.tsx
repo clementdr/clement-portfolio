@@ -4,7 +4,8 @@ const Portfolio = () => (
       <div className="px-4 sm:px-0">
         <h3 className="text-4xl font-semibold ">Projet Portfolio</h3>
         <p className="mt-1 max-w-2xl text-sm/6 text-gray-500">
-          Portfolio personnel de compétences et de projets réalisés.
+          Fiche technique du projet portfolio personnel de compétences et de
+          projets réalisés.
         </p>
       </div>
       <div className="mt-6 border-t border-gray-100">
@@ -35,6 +36,7 @@ const Portfolio = () => (
               <br />
               Couleur secondaire : #313131 (noir cassé)
               <br />
+              Couleur des liens : #3b82f6 (bleu)
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -48,19 +50,38 @@ const Portfolio = () => (
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt className="text-sm/6 font-medium ">Analyse</dt>
             <dd className="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
-              Dans le cadre de mon projet personnel, j'ai décidé de créer un
-              portfolio pour mettre en avant mes compétences et mes projets
-              réalisés durant ma formation. Le but était de concevoir un site
-              web simple, efficace et esthétique, qui puisse servir de vitrine
-              pour mes réalisations. J'ai choisi d'utiliser Next.js pour le
-              développement côté serveur et Tailwind CSS pour le design, afin
-              d'assurer une expérience utilisateur fluide et agréable. Le site
-              est structuré de manière à présenter mes projets et mes
-              compétences tant scolaires que professionnelles et personnelles.
-              J'ai également intégré une galerie d'images pour illustrer mes
-              réalisations. Le projet a été réalisé dans le cadre de
-              l'évaluation finale de ma 3e année de BUT MMI, afin de démontrer
-              mes compétences et mes acquis en développement web.
+              Dans le cadre de mon projet personnel, j’ai conçu un portfolio
+              destiné à valoriser mes compétences et les projets réalisés au
+              cours de ma formation. L’objectif était de créer un site web à la
+              fois simple, fonctionnel et esthétique, servant de véritable
+              vitrine pour mes réalisations. Pour le développement côté serveur,
+              j’ai opté pour Next.js, tandis que Tailwind CSS a été utilisé pour
+              assurer un design moderne et une expérience utilisateur agréable.
+              La structure du site met en avant mes compétences ainsi que mes
+              projets, qu’ils soient scolaires, professionnels ou personnels.
+              Une galerie d’images complète également la présentation en
+              illustrant mes travaux. Ce projet, réalisé dans le cadre de
+              l’évaluation finale de ma 3e année de BUT MMI, témoigne de mes
+              acquis en développement web.
+            </dd>
+          </div>
+          <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt className="text-sm/6 font-medium ">Méthode</dt>
+            <dd className="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
+              Pour concevoir un portfolio à la fois sobre et fonctionnel, j’ai
+              commencé par définir les contenus à intégrer : la présentation de
+              mes projets scolaires et professionnels, une galerie d’images,
+              ainsi que des sections dédiées à deux projets spécifiques —
+              Portfolio et Coulisses du domaine skiable. J’ai également inclus
+              une analyse de mes compétences actuelles, organisée par pôles,
+              afin de faire le point sur mon apprentissage. Le site a été
+              développé avec Next.js pour la partie serveur et Tailwind CSS pour
+              le design, afin d’assurer une interface moderne et cohérente. Il a
+              ensuite été déployé sur la plateforme Vercel. J'ai utilisé GitHub
+              pour le versioning et le déploiement, ce qui m'a permis de suivre
+              l'évolution du projet. Le site est responsive et optimisé pour une
+              navigation fluide sur tous les appareils. J'ai également intégré
+              un outil d'analyse pour suivre les performances du site.
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
