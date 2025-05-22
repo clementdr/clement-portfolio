@@ -24,4 +24,5 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: "Unbounded", sans-serif; /* Applique ta font personnalisée ici */
+  scroll-behavior: smooth;
 }

@@ -121,7 +121,7 @@ export default function Projets() {
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                   <button
                     onClick={() => handleVoirProjet(projet.id)}
-                    className="text-blue-600 hover:text-blue-900 cursor-pointer"
+                    className="text-blue-600 hover:text-indigo-500 cursor-pointer transition-colors duration-200"
                   >
                     Voir
                   </button>
@@ -225,7 +225,7 @@ export default function Projets() {
               </div>
               <div className="mt-2">
                 {selectedProjet.lien && (
-                  <p className="mt-2 text-sm text-blue-600 hover:underline">
+                  <p className="mt-2 text-sm text-blue-600 hover:text-indigo-500 transition-colors duration-200">
                     <a
                       href={selectedProjet.lien}
                       target="_blank"

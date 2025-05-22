@@ -36,7 +36,7 @@ const Portfolio = () => (
               <br />
               Couleur secondaire : #313131 (noir cassé)
               <br />
-              Couleur des liens : #3b82f6 (bleu)
+              Couleur tertiaire : #3b82f6 (bleu)
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -137,7 +137,7 @@ const Portfolio = () => (
                   <div className="ml-4 shrink-0">
                     <a
                       href="https://www.dmcg.co"
-                      className="font-medium text-blue-600 hover:text-indigo-500"
+                      className="font-medium text-blue-600 hover:text-indigo-500 transition-colors duration-200"
                       target="_blank"
                     >
                       Voir

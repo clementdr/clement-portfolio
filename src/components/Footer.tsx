@@ -6,7 +6,7 @@ const Footer = () => (
       <p>
         <a
           href="mailto:cderoberti@gmail.com"
-          className="text-blue-600 cursor-pointer font-medium"
+          className="text-blue-600 cursor-pointer font-medium hover:text-indigo-600 transition-colors duration-200"
         >
           cderoberti@gmail.com
         </a>

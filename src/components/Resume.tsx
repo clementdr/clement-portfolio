@@ -41,7 +41,7 @@ const ResumeItem = ({
         {shouldShowReadMore && (
           <button
             onClick={toggleExpand}
-            className="text-blue-600 cursor-pointer font-medium ml-1 focus:outline-none"
+            className="text-blue-600 cursor-pointer font-medium ml-1 focus:outline-none hover:text-indigo-600 transition-colors duration-200"
           >
             {isExpanded ? "Lire moins" : "... Lire la suite"}
           </button>
@@ -82,7 +82,7 @@ const Resume = () => {
           </h5>
           <h1 className="text-4xl font-medium">Où en sommes-nous ?</h1>
           <p className="text-gray-500 text-base font-light">
-            Après bientôt 1 an au sein de l'Office de Tourisme de
+            Après bientôt un an au sein de l'Office de Tourisme de
             Pralognan-la-Vanoise, il est temps de faire un bilan sur la qualité
             de mon apprentissage tant sur le plan professionnel que personnel.
           </p>
