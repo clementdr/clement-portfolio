@@ -4,11 +4,14 @@ import { useState } from "react";
 import Image from "next/image";
 
 const Galerie = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  // Créer un tableau d'images pour la galerie
   const images = Array.from(
     { length: 15 },
-    (_, i) => `/img/gallerie/${i + 1}.jpg`
+    (_, i) => `/img/gallerie/${i + 1}.webp`
   );
+
+  // État pour gérer l'image sélectionnée
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen grid grid-cols-3 gap-3 m-20 max-sm:m-10 max-sm:grid-cols-2 max-sm:gap-2">
@@ -22,6 +25,8 @@ const Galerie = () => {
           />
         </div>
       ))}
+
+      {/* Pop-up image */}
       {selectedImage && (
         <div
           className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"

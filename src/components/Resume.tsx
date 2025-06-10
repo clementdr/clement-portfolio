@@ -99,7 +99,7 @@ const Resume = () => {
         </div>
         <div className="overflow-hidden w-[450px] max-sm:w-full" dir="ltr">
           <img
-            src="../img/clement2.jpeg"
+            src="../img/clement2.webp"
             alt="Mon image"
             className="w-auto h-600px rounded-s-2xl overflow-hidden max-xl:w-60 max-sm:auto max-xl:rounded-2xl"
           />

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import Json from "../../public/projets.json";
+import Json from "../../data/projets.json";
 
 // Définir l'interface pour un projet
 interface Projet {
@@ -26,8 +26,8 @@ export default function Projets() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
 
+  // Fonction pour charger les données depuis le fichier JSON
   useEffect(() => {
-    // Fonction pour charger les données depuis le fichier JSON
     const loadProjets = async () => {
       try {
         const data: Projet[] = Json;
@@ -36,35 +36,36 @@ export default function Projets() {
         console.error("Erreur lors du chargement des projets:", error);
       }
     };
-
     loadProjets();
   }, []);
 
+  // Fonction pour gérer l'ouverture du modal
   const handleVoirProjet = (id: number) => {
     const projet = projets.find((p) => p.id === id);
     setSelectedProjet(projet || null);
     setIsModalOpen(true);
   };
 
+  // Fonction pour fermer le modal
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedProjet(null);
   };
 
+  // Effet pour gérer le défilement de la page lorsque le modal est ouvert
   useEffect(() => {
-    // Add overflow: hidden to body when modal is open
     if (isModalOpen) {
       document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "unset"; // Or '' to revert to default
+      document.body.style.overflow = "unset";
     }
 
-    // Cleanup: Remove the style when the component unmounts or modal closes
     return () => {
       document.body.style.overflow = "unset";
     };
   }, [isModalOpen]);
 
+  // Effet pour se placer en haut du modal lorsque celui-ci est ouvert
   useEffect(() => {
     if (isModalOpen && modalRef.current) {
       modalRef.current.scrollTop = 0;
@@ -131,7 +132,7 @@ export default function Projets() {
           </tbody>
         </table>
 
-        {/* Popup Modal */}
+        {/* Popup projet */}
         {isModalOpen && selectedProjet && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div

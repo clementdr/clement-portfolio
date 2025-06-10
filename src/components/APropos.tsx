@@ -4,7 +4,7 @@ const APropos = () => (
   <div className="min-h-screen flex items-center justify-center m-20 max-sm:m-10">
     <div className="flex justify-center gap-20 p-10 shadow-2xl bg-white rounded-xl w-full max-md:flex-col max-sm:gap-10 max-sm:p-5">
       <img
-        src="../img/clement.jpeg"
+        src="../img/clement.webp"
         alt="Mon image"
         className="w-auto h-150 rounded-xl max-md:w-[200px] max-md:h-auto max-xl:h-[300px] max-xl:h-auto "
       />
