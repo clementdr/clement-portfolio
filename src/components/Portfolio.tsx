@@ -94,9 +94,11 @@ const Portfolio = () => (
               <br />
               CE4.03 - Développer pour le web et les médias numériques en
               produisant un code fonctionnel, sobre et réutilisable. <br />{" "}
+              AC34.04 - Concevoir et développer des composants logiciels,
+              plugins ou extensions. <br />
               AC34.05 - Maitriser l’hébergement et le déploiement
-              d’applications. <br /> AC35.02 - Maîtriser la qualité en projet
-              Web ou multimédia.
+              d’applications. <br />
+              AC35.02 - Maîtriser la qualité en projet Web ou multimédia.
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">

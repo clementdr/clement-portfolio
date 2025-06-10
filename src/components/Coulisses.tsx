@@ -146,7 +146,7 @@ const Coulisses = () => {
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div
             ref={modalRef}
             className="bg-white rounded-lg p-8 w-full m-10 shadow-2xl overflow-y-auto max-h-[80vh]"
@@ -172,7 +172,7 @@ const Coulisses = () => {
               </h3>
               <p className="text-gray-600">
                 Mon alternance au sein de l'Office de Tourisme de
-                Pralognan-la-Vanoise a été marqué par un projet majeur : la
+                Pralognan-la-Vanoise a été marquée par un projet majeur : la
                 création d'une série de vidéos. L'objectif principal était de
                 concevoir un contenu engageant et informatif, destiné à être
                 diffusé sur les réseaux sociaux, en mettant en lumière le

@@ -53,8 +53,8 @@ export default function Home() {
       <APropos />
       <Projet />
       <Portfolio />
-      <Citation />
       <Galerie />
+      <Citation />
       <Coulisses />
       <Resume />
       <Footer />
