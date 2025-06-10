@@ -118,7 +118,6 @@ const Coulisses = () => {
                 height="315"
                 src={videos[current].url}
                 title={videos[current].title}
-                frameBorder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
