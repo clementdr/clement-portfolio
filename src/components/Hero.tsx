@@ -14,7 +14,9 @@ const Hero = () => (
         src="../img/responsive.webp"
         alt="responsive"
       />
-      <p className="text-xs font-light">Découvrez par vous-même !</p>
+      <p className="text-xs font-light max-sm:hidden">
+        Découvrez par vous-même !
+      </p>
     </div>
 
     <style jsx>{`
